@@ -7,7 +7,7 @@ public class CalculatorTest {
     public CalculatorTest() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Calculator.ArithmeticException {
         if (8 != Calculator.calculation(2, 6, '+')) {
             throw new AssertionError("Ошибка в методе");
         } else if (0 != Calculator.calculation(2, 2, '-')) {
@@ -43,7 +43,17 @@ public class CalculatorTest {
             System.out.println(Calculator.calculation(Integer.MAX_VALUE, 1, '+'));
             System.out.println(Calculator.squareRootExtraction(169.0));
 
+            assert 80.0 == Calculator.calculatingDiscount(100, 20) : "Неправильный расчёт";
+            Assertions.assertThatThrownBy(() -> {
+                Calculator.calculatingDiscount(-100, 10);}).isInstanceOf(ArithmeticException.class);
+            Assertions.assertThatThrownBy(() -> {
+                Calculator.calculatingDiscount(100, -10);}).isInstanceOf(ArithmeticException.class);
+            Assertions.assertThatThrownBy(() -> {
+                Calculator.calculatingDiscount(100, 1000);}).isInstanceOf(ArithmeticException.class);
+
 
         }
     }
 }
+
+

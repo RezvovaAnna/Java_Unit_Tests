@@ -17,12 +17,22 @@ public class Shop {
         this.products = products;
     }
 
-    public List<Product> getSortedListProducts() {
-        Collections.sort(this.products);
-        return this.products;
+
+    public void getSortedListProducts() {
+        Collections.sort(products, (p1, p2) -> Double.compare(p1.getCost(), p2.getCost()));
     }
 
     public Product getMostExpensiveProduct() {
-        return (Product)this.getSortedListProducts().get(this.products.size() - 1);
+        if (products.isEmpty()) {
+            return null;
+        }
+        return Collections.max(products, (p1, p2) -> Double.compare(p1.getCost(), p2.getCost()));
+    }
+
+
+    public void printProducts() {
+        for (Product product : products) {
+            System.out.println("Name: " + product.getTitle() + ", Price: " + product.getCost());
+        }
     }
 }
