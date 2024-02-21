@@ -1,3 +1,5 @@
+package Seminar01Task02;
+
 import Seminar01Task01.Calculator;
 import Seminar01Task02.Product;
 import Seminar01Task02.Shop;
