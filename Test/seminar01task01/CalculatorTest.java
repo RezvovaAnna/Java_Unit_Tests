@@ -1,4 +1,4 @@
-package Test.seminar01task01;
+package seminar01task01;
 
 import Seminar01Task01.Calculator;
 import org.junit.jupiter.api.Test;
@@ -70,6 +70,13 @@ public class CalculatorTest {
             assertThat(Calculator.calculatingDiscount(100, 101));}
         ).isInstanceOf(Calculator.ArithmeticException.class).hasMessage("Скидка больше 100%");
     }
+
+    @Test
+    void computeAreaCircle() {
+        Calculator calculator = new Calculator();
+        assertThat(calculator.computeAreaCircle(10)).isEqualTo(314.1592653589793);
+    }
+
 
 }
 
