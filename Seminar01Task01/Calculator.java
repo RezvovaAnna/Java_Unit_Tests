@@ -64,7 +64,11 @@ public class Calculator {
         return purchaseAmount / 100 * (100 - discountAmount);
     }
 
-    public static class ArithmeticException extends Exception {
+    public double computeAreaCircle(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+        public static class ArithmeticException extends Exception {
         public ArithmeticException(String message) {
             super(message);
         }
