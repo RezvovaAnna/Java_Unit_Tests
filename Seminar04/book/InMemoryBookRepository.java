@@ -23,4 +23,5 @@ public class InMemoryBookRepository implements MemoryBookRepository {
     public List<Book> findAll() {
         return new ArrayList<>(books.values());
     }
+
 }

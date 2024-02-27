@@ -2,7 +2,6 @@ package seminar04.httpC;
 
 import Seminar04.httpC.HttpClient;
 import Seminar04.httpC.WebService;
-import org.assertj.core.api.AbstractBigDecimalAssert;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

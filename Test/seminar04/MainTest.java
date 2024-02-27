@@ -1,7 +1,6 @@
 package seminar04;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.Iterator;
 import java.util.List;
 

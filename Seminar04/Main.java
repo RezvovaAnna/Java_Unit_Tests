@@ -1,15 +1,5 @@
 package Seminar04;
 
-import Seminar04.book.Book;
-import Seminar04.book.BookRepository;
-import Seminar04.book.BookService;
-import Seminar04.book.InMemoryBookRepository;
-import Seminar04.database.DataProcessor;
-import Seminar04.database.Database;
-import Seminar04.hotel.BookingService;
-import Seminar04.hotel.HotelService;
-import Seminar04.message.MessageService;
-import Seminar04.message.NotificationService;
 import Seminar04.weather.WeatherReporter;
 import Seminar04.weather.WeatherService;
 

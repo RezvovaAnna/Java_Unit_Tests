@@ -15,6 +15,10 @@ public class Book {
         this.author = author;
     }
 
+    public Book() {
+
+    }
+
     public String getId() {
         return id;
     }
